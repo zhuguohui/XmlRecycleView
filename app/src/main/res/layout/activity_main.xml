@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="java.util.List" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.zhuguohui.myapplication.xml.XmlRecycleView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.zhuguohui.myapplication.xml.XmlRecycleViewAdapter
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:data="@{data}"
+                app:layout="@layout/layout_user_item" />
+        </com.zhuguohui.myapplication.xml.XmlRecycleView>
+
+
+    </RelativeLayout>
+</layout>
